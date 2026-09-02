@@ -1,0 +1,30 @@
+### Creer les documents 
+POST  http://localhost:5000/api/v1/
+Content-Type: application/json
+
+{
+   "nom":"test James",
+   "postnom":"Jeancy",
+   "prenom":"James",
+   "documentUrl":""
+}
+
+### touts les documents
+GET http://localhost:5000/api/v1/
+
+### document par ID 
+GET http://localhost:5000/api/v1/6a7f555b41573cb29be553ce
+
+### updates documents 
+PATCH  http://localhost:5000/api/v1/6a7f555b41573cb29be553ce
+Content-Type: application/json
+
+{
+   "nom":"test TEch",
+   "postnom":"Jeancy@gmail.com",
+   "prenom":"James222"
+
+}
+
+### deletes documets 
+DELETE  http://localhost:5000/api/v1/6a7f555b41573cb29be553ce
