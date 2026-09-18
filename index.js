@@ -13,12 +13,14 @@ app.use(cors());
 // Routes
 app.use("/api/v1", documenteRoutes);
 
+
 const startServer = async () => {
+
   try {
-    // Connect to MongoDB first
+    // 
     await connectDB();
 
-    // Start the server only after MongoDB connects
+ // 
     app.listen(port, () => {
       console.log(` Server started on port ${port}`);
       console.log(" MongoDB connected");
@@ -26,6 +28,8 @@ const startServer = async () => {
   } catch (error) {
     console.error(" Failed to start server:", error);
     process.exit(1);
+
+    
   }
 };
 
